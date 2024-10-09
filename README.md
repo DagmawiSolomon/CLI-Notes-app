@@ -14,11 +14,23 @@ The CLI Note-Taking App is a powerful, keyboard-driven tool designed for users w
 3. **Flashcards for Study**  
    Users can transform their notes into flashcards directly from the CLI, enabling easy revision of key concepts. Flashcards can be auto-generated from notebook content or created manually, with options for spaced repetition to aid in memory retention.
 
+4. **Conditional Build Features via CLI**  
+   The app can be customized at build time using **Rust’s Cargo features**, allowing users to include or exclude specific functionality (e.g., notebooks, flashcards, hotkeys). This enables lightweight, modular builds depending on the user’s needs. From the command line, users can choose to build the app with or without certain features, streamlining the app’s functionality for minimal environments.
+
+   - **Example Commands:**
+     - To build the app with the `notebooks` and `hotkeys` features:
+       ```bash
+       cargo build --features "notebooks hotkeys"
+       ```
+     - To build the app without the default features and only include `flashcards`:
+       ```bash
+       cargo build --no-default-features --features "flashcards"
+       ```
+
 #### Additional Features
 
 - **Tagging System**: Tag notes with custom labels for better categorization and searchability.
 - **Search Functionality**: Quickly search through notes and notebooks using keywords, filters, or tags.
-- **Backup and Sync**: Sync notes with cloud storage or backup to a local file to prevent data loss and allow for cross-device access.
 - **Export Options**: Export notes or notebooks in various formats such as Markdown, plain text, or JSON for external use.
 - **Customizable Shortcuts**: Customize hotkeys and commands to fit your workflow.
 - **Version Control for Notes**: Track changes in your notes and revert to previous versions if needed.
@@ -29,6 +41,7 @@ The CLI Note-Taking App is a powerful, keyboard-driven tool designed for users w
 - **Storage**: SQLite for persistent storage or flat-file storage for simplicity
 - **User Interface**: Command-line interface with minimalist design and keyboard shortcuts
 - **Dependencies**: Minimal, focusing on portability and performance
+- **Conditional Compilation**: Utilize Cargo features to include/exclude functionality based on build configuration.
 
 #### Use Cases
 
@@ -36,4 +49,4 @@ The CLI Note-Taking App is a powerful, keyboard-driven tool designed for users w
 - Students can organize lecture notes into notebooks and use flashcards for efficient studying.
 - Researchers can easily tag and categorize their findings into different notebooks, adding notes directly from the terminal.
 
-This CLI note-taking app is designed to enhance productivity, providing an easy and intuitive way to capture and manage information through the command line while staying organized and focused.
+The CLI note-taking app is designed to enhance productivity, providing an easy and intuitive way to capture and manage information through the command line while staying organized and focused. The ability to customize builds makes the app highly adaptable to different user environments and needs.
