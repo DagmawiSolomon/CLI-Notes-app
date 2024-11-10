@@ -50,3 +50,5 @@ The CLI Note-Taking App is a powerful, keyboard-driven tool designed for users w
 - Researchers can easily tag and categorize their findings into different notebooks, adding notes directly from the terminal.
 
 The CLI note-taking app is designed to enhance productivity, providing an easy and intuitive way to capture and manage information through the command line while staying organized and focused. The ability to customize builds makes the app highly adaptable to different user environments and needs.
+
+DISCONTINUED
